@@ -7,19 +7,27 @@
     <style>
         body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-start;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding-top: 40px;
             background-color: #f4f4f4;
             font-family: Arial, sans-serif;
             text-align: center;
+            color: #333;
+            box-sizing: border-box;/
         }
         .content {
             color: #333;
+            margin-bottom: 20px;
+            padding: 0 20px;
+            width: 100%;
+            box-sizing: border-box;
         }
         .content h1 {
-            font-size: 4em;
+            font-size: 3.5em;
             margin-bottom: 20px;
         }
         .content p {
@@ -32,12 +40,36 @@
         a:hover {
             text-decoration: underline;
         }
+        .mission, .portfolio {
+            max-width: 600px;
+            margin-bottom: 20px;
+            padding: 0 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .mission h2, .portfolio h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .mission p, .portfolio p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
     <div class="content">
         <h1>BAYE</h1>
         <p>Contact us at: <a href="mailto:support@baye.ca">support@baye.ca</a></p>
+        <p>VoteInformer Alpha Test: <a href="https://forms.gle/MhKA6oc44wS9DbNt9">Sign up here</a></p>
+    </div>
+    <div class="mission">
+        <h2>Our Mission</h2>
+        <p>At Baye Labs Inc., we invite you to explore the world of data with curiosity and clarity. We aim to make the journey of learning and discovery more relaxing, intuitive and fun. We're here to build tools that not only inform, but inspire confidence in your everyday choices.</p>
+    </div>
+    <div class="portfolio">
+        <h2>Products</h2>
+        <p>VoteInformer is here to help you discover which political parties truly align with your values. By focusing on the actual voting records of politicians, our app empowers you to make decisions based on facts rather than the noise of campaigns, media, or misinformation. In a time of growing political polarization, VoteInformer offers a clear and trustworthy way to navigate your choices, grounding them in the reality of legislative actions.</p>
     </div>
 </body>
 </html>
