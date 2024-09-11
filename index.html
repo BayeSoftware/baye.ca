@@ -17,7 +17,7 @@
             font-family: Arial, sans-serif;
             text-align: center;
             color: #333;
-            box-sizing: border-box;/
+            box-sizing: border-box;
         }
         .content {
             color: #333;
@@ -55,13 +55,38 @@
             font-size: 1.2em;
             line-height: 1.6;
         }
+        .portfolio p.small-message {
+            font-size: 0.8em;
+            color: #666;
+        }
+        .screenshots-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px 0;
+            margin-bottom: 40px;
+            max-width: 100%;
+        }
+        .screenshots {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .screenshots img {
+            width: 200px;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body>
     <div class="content">
         <h1>BAYE</h1>
         <p>Contact us at: <a href="mailto:support@baye.ca">support@baye.ca</a></p>
-        <p>VoteInformer Alpha Test: <a href="https://forms.gle/MhKA6oc44wS9DbNt9">Sign up here</a></p>
+        <p>Interested in helping us improve our products? <a href="https://forms.gle/1nnicD54RDMKjVvs5">Sign up here</a></p>
     </div>
     <div class="mission">
         <h2>Our Mission</h2>
@@ -70,6 +95,18 @@
     <div class="portfolio">
         <h2>Products</h2>
         <p>VoteInformer helps you easily learn about government bills and who supports them. By showing how politicians vote, our app makes it simple to understand what’s happening in government. In a world where information can often be misleading, VoteInformer is here to help you stay informed and confident in your choices.</p>
+        <p>Try it out at <a href="https://voteinformer.ca">voteinformer.ca</a>!</p>
+        <div class="screenshots-container">
+            <div class="screenshots">
+                <img src="images/screenshot1.jpeg" alt="VoteInformer Screenshot 1">
+                <img src="images/screenshot2.jpeg" alt="VoteInformer Screenshot 2">
+                <img src="images/screenshot3.jpeg" alt="VoteInformer Screenshot 3">
+                <img src="images/screenshot4.jpeg" alt="VoteInformer Screenshot 1">
+                <img src="images/screenshot5.jpeg" alt="VoteInformer Screenshot 2">
+                <img src="images/screenshot6.jpeg" alt="VoteInformer Screenshot 3">
+            </div>
+        </div>
+        <p class="small-message">*Please note the values in the above screenshots are randomly generated and do not reflect the actual preferences of any real person.</p>
     </div>
 </body>
 </html>
