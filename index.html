@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,109 +9,203 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding-top: 40px;
+            padding-top: 70px;
             background-color: #f4f4f4;
             font-family: Arial, sans-serif;
-            text-align: center;
             color: #333;
-            box-sizing: border-box;
         }
-        .content {
-            color: #333;
-            margin-bottom: 20px;
-            padding: 0 20px;
+
+        nav {
             width: 100%;
-            box-sizing: border-box;
+            background: #000;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .content h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
-        .content p {
-            font-size: 1.2em;
-        }
-        a {
-            color: #0066cc;
+
+        nav ul li a {
+            color: #fff;
             text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
         }
-        a:hover {
+
+        nav ul li a:hover {
             text-decoration: underline;
         }
-        .mission, .portfolio {
-            max-width: 600px;
-            margin-bottom: 20px;
-            padding: 0 20px;
+
+        .content {
+            text-align: center;
+            padding: 15px 20px;
             width: 100%;
-            box-sizing: border-box;
+            max-width: 800px;
+            margin-bottom: 20px;
         }
-        .mission h2, .portfolio h2 {
-            font-size: 2em;
+
+        .content h1 {
+            font-size: 3em;
             margin-bottom: 10px;
         }
-        .mission p, .portfolio p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-        .portfolio p.small-message {
-            font-size: 0.8em;
-            color: #666;
-        }
-        .screenshots-container {
+
+        .buttons-container {
             display: flex;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            padding: 10px 0;
-            margin-bottom: 40px;
-            max-width: 100%;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            margin-bottom: 25px;
         }
-        .screenshots {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
+
+        .button {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1em;
         }
-        .screenshots img {
-            width: 200px;
-            height: auto;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            flex-shrink: 0;
+
+        .button:hover {
+            background: #333;
+        }
+
+        .community-container {
+            margin: 20px 0;
+        }
+
+        .community-container p {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 0 20px;
+            text-align: center;
+            max-width: 800px;
+            line-height: 1.5;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+        }
+
+        .section ul {
+            text-align: left;
+            list-style: disc inside;
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            padding: 20px 10px;
+            width: 100%;
+            text-align: center;
+            margin-top: auto;
+            font-size: 1em;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            text-align: center;
+            font-size: 1em;
+            line-height: 1.5;
+            padding: 15px 20px;
+            max-width: 800px;
+            margin-bottom: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
         }
     </style>
 </head>
+
 <body>
+    <nav>
+        <ul>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#why-try">Why Try VoteInformer?</a></li>
+            <li><a href="#expanding">Expanding</a></li>
+            <li><a href="#canada">Canada</a></li>
+            <li><a href="#us">USA</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#disclaimer">Disclaimer</a></li>
+        </ul>
+    </nav>
+
     <div class="content">
         <h1>BAYE</h1>
-        <p>Contact us at: <a href="mailto:support@baye.ca">support@baye.ca</a></p>
-        <p>Interested in helping us improve our products? <a href="https://forms.gle/1nnicD54RDMKjVvs5">Sign up here</a></p>
-    </div>
-    <div class="mission">
-        <h2>Our Mission</h2>
-        <p>At Baye Labs Inc., we invite you to explore the world of data with curiosity and clarity. We aim to make the journey of learning and discovery more relaxing, intuitive and fun. We're here to build tools that not only inform, but inspire confidence in your everyday choices.</p>
-    </div>
-    <div class="portfolio">
-        <h2>Products</h2>
-        <p>VoteInformer helps you easily learn about government bills and who supports them. By showing how politicians vote, our app makes it simple to understand what’s happening in government. In a world where information can often be misleading, VoteInformer is here to help you stay informed and confident in your choices.</p>
-        <p>Try it out at <a href="https://voteinformer.ca">voteinformer.ca</a>!</p>
-        <div class="screenshots-container">
-            <div class="screenshots">
-                <img src="images/screenshot1.jpeg" alt="VoteInformer Screenshot 1">
-                <img src="images/screenshot2.jpeg" alt="VoteInformer Screenshot 2">
-                <img src="images/screenshot3.jpeg" alt="VoteInformer Screenshot 3">
-                <img src="images/screenshot4.jpeg" alt="VoteInformer Screenshot 1">
-                <img src="images/screenshot5.jpeg" alt="VoteInformer Screenshot 2">
-                <img src="images/screenshot6.jpeg" alt="VoteInformer Screenshot 3">
-            </div>
+        <div class="community-container">
+            <p>Interested in helping us shape the future of political learning?</p>
+            <p>We’re excited to hear your feedback and ideas!</p>
+            <a href="https://forms.gle/1nnicD54RDMKjVvs5" class="button">Join our community</a>
         </div>
-        <p class="small-message">*Please note the values in the above screenshots are randomly generated and do not reflect the actual preferences of any real person.</p>
     </div>
+
+    <div class="buttons-container">
+        <a href="https://voteinformer.org" class="button">Try VoteInformer: USA</a>
+        <a href="https://voteinformer.ca" class="button">Try VoteInformer: Canada</a>
+    </div>
+
+    <div class="section" id="why-try">
+        <h2>Why Try VoteInformer?</h2>
+        <p>VoteInformer is a civic engagement app that connects citizens with information they need to participate meaningfully in the political process. Our app invites you to vote on the same topics that the government has already decided on, offering a clear comparison of how your views align with those of political parties. Whether you’re exploring how parties align with your values, reviewing easy-to-understand legislative summaries, or analyzing your voting profile, VoteInformer makes navigating the political landscape more approachable and allows you to excplore dynamic insights through interactive tools. We aim to support informed decision-making and make political engagement not only more accessible but also enjoyable. Our alpha versions are currently available for both Canada and the United States, and are designed to deepen your understanding of how your values map onto the political landscape.</p>
+
+    <div class="section" id="mission">
+        <h2>Mission</h2>
+        <p>At Baye Labs Inc., our mission is to make complex information more accessible and engaging for anyone looking to better understand data-driven topics. Inspired by Bayesian principles, we focus on providing clear, evidence-based insights while always linking back to original sources for transparency. Our goal is to empower users with tools that simplify data exploration and even make it fun to explore. We believe in turning learning into a smooth and enjoyable experience, helping everyone navigate complex subjects—like politics—with ease.</p>
+    </div>
+
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:support@baye.ca">support@baye.ca</a></p>
+        <p>Address: 1800 Argyle St Unit 801, Halifax, NS B3J 3N8</p>
+    </div>
+
+    <div class="disclaimer" id="disclaimer">
+        <h2>Disclaimer</h2>
+        <p>At Baye Labs Inc., we do not provide legal advice. Our mission is not to influence people's views but to make complex information more accessible and transparent. We are committed to being non-partisan and to referencing reliable government data in our products. Our primary goal is to simplify the complex, making learning both enjoyable and informative, while enabling individuals to form their own opinions and make informed decisions. We strive to maintain transparency and to provide tools that empower users without imposing any particular viewpoint.</p>
+    </div>
+
     <footer>
-        <p><a href="/docs/legal/privacy_policy/">Privacy Policy</a> |
-        <a href="/docs/legal/terms_of_service/">Terms of Service</a></p>
+        <p><a href="https://baye.ca/docs/legal/privacy_policy">Privacy Policy</a> |
+            <a href="https://baye.ca/docs/legal/terms_of_service">Terms of Service</a> |
+            <a href="https://www.instagram.com/explorewithbaye">
+                <img src="images/instagram-icon.png" alt="Instagram" style="width:24px; height:24px; vertical-align:middle;">
+            </a>
+        </p>
     </footer>
 </body>
+
 </html>
