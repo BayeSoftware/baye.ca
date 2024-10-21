@@ -58,12 +58,13 @@
         }
 
         .content h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 10px;
         }
 
         .buttons-container {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             gap: 15px;
             margin-top: 15px;
@@ -79,6 +80,9 @@
             border-radius: 5px;
             font-weight: bold;
             font-size: 1em;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
         }
 
         .button:hover {
@@ -100,7 +104,7 @@
             text-align: center;
             max-width: 800px;
             line-height: 1.5;
-            scroll-margin-top: 80px; /* Offset for fixed navbar */
+            scroll-margin-top: 80px;
         }
 
         .section h2 {
@@ -148,6 +152,16 @@
             margin-bottom: 30px;
             border-top: 1px solid #ccc;
             padding-top: 20px;
+        }
+
+        @media only screen and (min-width: 600px) {
+            .buttons-container {
+                flex-direction: row;
+            }
+
+            .content h1 {
+                font-size: 3em;
+            }
         }
     </style>
 </head>
