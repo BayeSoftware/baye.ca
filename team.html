@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Baye Labs</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 50px;
+            max-width: 700px;
+        }
+
+        .profile img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .bio {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        @media (min-width: 700px) {
+            .team-container {
+                display: flex;
+                gap: 60px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .profile {
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Our Team</h1>
+
+    <div class="team-container">
+        <div class="profile">
+            <img src="images/michael.jpg" alt="Photo of Michael Traynor">
+            <h2>Michael Traynor</h2>
+            <p class="bio">
+                Michael Traynor is a Co-Founder at Baye Labs Inc. He has many years of experience working in software development and loves building tools that make complicated information easy for people to understand and use.
+                <br><br>
+                Michael has a background in Artificial Intelligence and works with both backend and frontend technologies. He believes technology can help people access information and make better decisions. His work at Baye Labs focuses on creating simple and helpful data-driven tools for everyone.
+            </p>
+        </div>
+
+        <div class="profile">
+            <img src="images/blair.jpeg" alt="Photo of Blair Ellis">
+            <h2>Blair Ellis</h2>
+            <p class="bio">
+                Blair Ellis is a Co-Founder at Baye Labs Inc. He works professionally as an audiologist and has a background in psychology and neuroscience.
+                <br><br>
+                At Baye Labs, Blair leads UI/UX research and design, customer discovery, and helps structure backend databases alongside Co-Founder Michael Traynor. Blair spends time talking directly with users, uncovering why complex topics like politics can feel overwhelming or hard to engage with. His focus is on creating tools that people find intuitive, helpful, and genuinely enjoyable, making it easier to stay informed and confident.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
