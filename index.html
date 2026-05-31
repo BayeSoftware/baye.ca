@@ -16,12 +16,12 @@
             --rainbow: linear-gradient(to right,
                 #FAC8B6 0%, #FBD3AB 18%, #FBE7A7 36%, #BCE2C7 54%, #B6D8EE 72%, #CFC4ED 100%);
             --surface: #ffffff;
-            --fg-strong: #1A2740;
-            --fg: #2E3F5C;
-            --fg-quiet: #566984;
+            --fg-strong: #000000;
+            --fg: #000000;
+            --fg-quiet: #222222;
             --border: #D2DEED;
-            --accent: #9C8CCE;
-            --accent-hover: #604F90;
+            --accent: #6E5BA5;
+            --accent-hover: #56468C;
             --sky: #6FAFD8;
             --lilac: #9C8CCE;
             --mint: #7BC192;
@@ -136,7 +136,7 @@
 
         .button {
             display: inline-block;
-            background: var(--fg-strong);
+            background: var(--accent);
             color: #fff;
             padding: 12px 26px;
             text-decoration: none;
@@ -146,11 +146,11 @@
             width: 100%;
             max-width: 260px;
             text-align: center;
-            box-shadow: 0 6px 16px -8px rgba(26, 39, 64, 0.5);
+            box-shadow: 0 6px 16px -8px rgba(110, 91, 165, 0.55);
             transition: background 150ms ease, transform 150ms ease;
         }
 
-        .button:hover { background: #000; transform: translateY(-1px); }
+        .button:hover { background: var(--accent-hover); transform: translateY(-1px); }
 
         .button--ghost {
             background: transparent;
@@ -209,14 +209,14 @@
             width: 7px;
             height: 7px;
             border-radius: 50%;
-            background: var(--fg-quiet);
+            background: var(--accent);
         }
 
         .section a { color: var(--accent-hover); font-weight: 600; }
         .section a.button { color: #fff; }
 
         footer {
-            background: #1A2740;
+            background: #111111;
             color: #E4EAF2;
             padding: 24px 16px;
             width: 100%;
