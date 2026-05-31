@@ -8,7 +8,7 @@
     <meta name="description" content="Baye builds tools that make legislation easier to understand, track, and act on. Our flagship product, Polity, shows you exactly what a bill changes and how it ripples through the laws it touches.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
     <style>
         :root {
             --ocean: linear-gradient(180deg, #ECF5FB 0%, #EEF1FB 60%, #F3EFFB 100%);
@@ -29,7 +29,7 @@
             --radius-pill: 999px;
             --shadow-card: 0 6px 14px -6px rgba(46, 63, 92, 0.16), 0 2px 4px -2px rgba(46, 63, 92, 0.08);
             --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            --font-wordmark: "Caveat", "Marker Felt", cursive;
+            --font-wordmark: "Fraunces", Georgia, "Times New Roman", serif;
         }
 
         * { box-sizing: border-box; }
@@ -100,9 +100,10 @@
 
         .wordmark {
             font-family: var(--font-wordmark);
-            font-size: 5em;
+            font-size: 4em;
             line-height: 1;
-            font-weight: 700;
+            font-weight: 600;
+            letter-spacing: -0.01em;
             color: var(--fg-strong);
             margin: 0 0 16px;
         }
@@ -235,7 +236,7 @@
 
         @media only screen and (min-width: 600px) {
             .buttons-container { flex-direction: row; }
-            .wordmark { font-size: 6.5em; }
+            .wordmark { font-size: 5.5em; }
         }
     </style>
 </head>
@@ -254,7 +255,7 @@
     </nav>
 
     <div class="content">
-        <h1 class="wordmark">BAYE</h1>
+        <h1 class="wordmark">Baye</h1>
         <p class="tagline">We build tools that make legislation easier to understand, track, and act on.</p>
         <div class="buttons-container">
             <a href="mailto:support@baye.ca?subject=Polity%20enquiry" class="button">Get in touch</a>
