@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BAYE</title>
+    <meta name="description" content="Baye builds tools that make legislation easier to understand, track, and act on. Our flagship product, Polity, represents laws as a connected graph so you can see exactly what a bill changes.">
     <style>
         body {
             display: flex;
@@ -35,6 +36,7 @@
             padding: 0;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 20px;
         }
 
@@ -60,6 +62,14 @@
         .content h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.25em;
+            color: #555;
+            margin: 0 auto 20px;
+            max-width: 640px;
+            line-height: 1.5;
         }
 
         .buttons-container {
@@ -89,15 +99,6 @@
             background: #333;
         }
 
-        .community-container {
-            margin: 20px 0;
-        }
-
-        .community-container p {
-            font-size: 1.1em;
-            margin-bottom: 8px;
-        }
-
         .section {
             margin-bottom: 30px;
             padding: 0 20px;
@@ -121,6 +122,14 @@
             list-style: disc inside;
             padding-left: 20px;
             margin: 15px 0;
+        }
+
+        .feature-list {
+            text-align: left;
+            max-width: 620px;
+            margin: 15px auto 0;
+            line-height: 1.6;
+            font-size: 1.1em;
         }
 
         footer {
@@ -170,7 +179,8 @@
     <nav>
         <ul>
             <li><a href="#mission">Mission</a></li>
-            <li><a href="#what-is">What is VoteInformer?</a></li>
+            <li><a href="#polity">Polity</a></li>
+            <li><a href="#previous">Previous Projects</a></li>
             <li><a href="#contact">Contact Us</a></li>
             <li><a href="team.html">Our Team</a></li>
             <li><a href="#disclaimer">Disclaimer</a></li>
@@ -179,25 +189,32 @@
 
     <div class="content">
         <h1>BAYE</h1>
-        <div class="community-container">
-            <p>Interested in helping us shape the future of political learning?</p>
-            <p>Sign-up here to help us improve our app!</p>
-            <a href="https://forms.gle/1nnicD54RDMKjVvs5" class="button">Join our community</a>
+        <p class="tagline">We build tools that make legislation easier to understand, track, and act on.</p>
+        <div class="buttons-container">
+            <a href="mailto:support@baye.ca?subject=Polity%20enquiry" class="button">Get in touch</a>
         </div>
     </div>
 
-    <div class="buttons-container">
-        <a href="https://voteinformer.org" class="button">Try VoteInformer!</a>
-    </div>
-
-    <div class="section" id="what-is">
-        <h2>What is VoteInformer?</h2>
-        <p>VoteInformer is a civic engagement app that connects citizens with information they need to participate meaningfully in the political process. Our app invites you to vote on the same topics that the government has already decided on, offering a clear comparison of how your views align with those of political parties. Whether you’re exploring how parties align with your values, reviewing easy-to-understand legislative summaries, or analyzing your voting profile, VoteInformer makes navigating the political landscape more approachable and allows you to explore dynamic insights through interactive tools. We aim to support informed decision-making and make political engagement not only more accessible but also enjoyable. Our alpha versions are currently available for both Canada and the United States, and are designed to deepen your understanding of how your values map onto the political landscape.</p>
+    <div class="section" id="polity">
+        <h2>Polity</h2>
+        <p>Polity is our flagship product: an AI-native tool that makes legislation easier to read, track, and understand. It represents laws as a connected graph, so the complex web of cross-references and dependencies in legal text becomes something you can actually navigate.</p>
+        <ul class="feature-list">
+            <li>See exactly what a bill changes, with amendments shown in the context of the acts they touch.</li>
+            <li>Compare versions of a bill side by side, from introduction through to law.</li>
+            <li>Understand definitions, cross-references, and dependencies without rebuilding them by hand.</li>
+        </ul>
+        <p>It is built for the people who work closely with legislation &mdash; policy staff, legislative and parliamentary staff, law clerks, and government-relations and advocacy professionals.</p>
     </div>
 
     <div class="section" id="mission">
         <h2>Mission</h2>
-        <p>At Baye Labs Inc., our mission is to make complex information more accessible and engaging for anyone looking to better understand data-driven topics. Inspired by Bayesian principles, we focus on providing clear, evidence-based insights while always linking back to original sources for transparency. Our goal is to empower users with tools that simplify data exploration and even make it fun to explore. We believe in turning learning into a smooth and enjoyable experience, helping everyone navigate complex subjects—like politics—with ease.</p>
+        <p>At Baye Labs Inc., our mission is to make complex information more accessible and engaging for anyone looking to better understand data-driven topics. Inspired by Bayesian principles, we focus on providing clear, evidence-based insights while always linking back to original sources for transparency. Our goal is to empower users with tools that simplify data exploration and even make it fun to explore. We believe in turning learning into a smooth and enjoyable experience, helping everyone navigate complex subjects&mdash;like politics&mdash;with ease.</p>
+    </div>
+
+    <div class="section" id="previous">
+        <h2>Previous Projects</h2>
+        <p><strong>VoteInformer</strong> was our first product &mdash; a civic-engagement app that helps people see which parties and politicians align with the policies they actually care about, moving the focus from political theatre toward real policy. It laid the groundwork for the legislative knowledge that powers Polity today.</p>
+        <p><a href="https://voteinformer.ca">Learn about VoteInformer</a></p>
     </div>
 
     <div class="section" id="contact">
@@ -208,7 +225,7 @@
 
     <div class="disclaimer" id="disclaimer">
         <h2>Disclaimer</h2>
-        <p>Baye Labs Inc. provides tools to help users better understand complex topics but does not offer legal advice. Our tools and insights are non-partisan and designed for educational purposes only. We link directly to original sources for transparency, and users should refer to these sources for verification. For any legal or professional advice, please consult a qualified expert.</p>
+        <p>Baye Labs Inc. provides tools to help users better understand complex topics but does not offer legal advice. Our tools and insights are non-partisan and designed for informational purposes only. We link directly to original sources for transparency, and users should refer to these sources for verification. For any legal or professional advice, please consult a qualified expert.</p>
     </div>
 
     <footer>
