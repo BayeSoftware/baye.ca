@@ -8,7 +8,7 @@
     <meta name="description" content="Baye builds tools that make legislation easier to understand, track, and act on. Our flagship product, Polity, shows you exactly what a bill changes and how it ripples through the laws it touches.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --ocean: linear-gradient(180deg, #ECF5FB 0%, #EEF1FB 60%, #F3EFFB 100%);
@@ -29,7 +29,7 @@
             --radius-pill: 999px;
             --shadow-card: 0 6px 14px -6px rgba(46, 63, 92, 0.16), 0 2px 4px -2px rgba(46, 63, 92, 0.08);
             --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            --font-wordmark: "Space Grotesk", var(--font-sans);
+            --font-wordmark: "Caveat", "Marker Felt", cursive;
         }
 
         * { box-sizing: border-box; }
@@ -94,16 +94,15 @@
         .content {
             text-align: center;
             padding: 48px 24px 12px;
-            width: 100%;
-            max-width: 600px;
+            width: 92%;
+            max-width: 1400px;
         }
 
         .wordmark {
             font-family: var(--font-wordmark);
-            font-size: 3em;
+            font-size: 5em;
             line-height: 1;
             font-weight: 700;
-            letter-spacing: -0.02em;
             color: var(--fg-strong);
             margin: 0;
         }
@@ -150,15 +149,24 @@
 
         .button:hover { background: #000; transform: translateY(-1px); }
 
+        .button--ghost {
+            background: transparent;
+            color: var(--fg-strong);
+            border: 1px solid #BAC6D7;
+            box-shadow: none;
+        }
+
+        .button--ghost:hover { background: rgba(26, 39, 64, 0.06); transform: translateY(-1px); }
+
         .section {
             background: transparent;
             border: none;
             border-bottom: 1px solid var(--border);
             box-shadow: none;
-            padding: 34px 28px;
-            margin: 0 24px;
-            width: calc(100% - 48px);
-            max-width: 560px;
+            padding: 34px 0;
+            margin: 0 auto;
+            width: 92%;
+            max-width: 1400px;
             line-height: 1.65;
             scroll-margin-top: 90px;
         }
@@ -221,7 +229,7 @@
 
         @media only screen and (min-width: 600px) {
             .buttons-container { flex-direction: row; }
-            .wordmark { font-size: 4em; }
+            .wordmark { font-size: 6.5em; }
         }
     </style>
 </head>
@@ -244,7 +252,8 @@
         <div class="wordmark-underline"></div>
         <p class="tagline">We build tools that make legislation easier to understand, track, and act on.</p>
         <div class="buttons-container">
-            <a href="mailto:support@baye.ca?subject=Polity%20enquiry" class="button">Get in touch</a>
+            <a href="https://polity.baye.ca" class="button" target="_blank" rel="noopener">Try the Polity alpha</a>
+            <a href="mailto:support@baye.ca?subject=Polity%20enquiry" class="button button--ghost">Get in touch</a>
         </div>
     </div>
 
