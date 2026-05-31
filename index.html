@@ -6,69 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BAYE</title>
     <meta name="description" content="Baye builds tools that make legislation easier to understand, track, and act on. Our flagship product, Polity, represents laws as a connected graph so you can see exactly what a bill changes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --ocean: linear-gradient(180deg, #ECF5FB 0%, #EEF1FB 60%, #F3EFFB 100%);
+            --header-bar: linear-gradient(to right, #ECF5FB 0%, #EEF1FB 55%, #F3EFFB 100%);
+            --rainbow: linear-gradient(to right,
+                #FAC8B6 0%, #FBD3AB 18%, #FBE7A7 36%, #BCE2C7 54%, #B6D8EE 72%, #CFC4ED 100%);
+            --surface: #ffffff;
+            --fg-strong: #1A2740;
+            --fg: #2E3F5C;
+            --fg-quiet: #566984;
+            --border: #D2DEED;
+            --accent: #9C8CCE;
+            --accent-hover: #604F90;
+            --sky: #6FAFD8;
+            --lilac: #9C8CCE;
+            --mint: #7BC192;
+            --radius-lg: 10px;
+            --radius-pill: 999px;
+            --shadow-card: 0 6px 14px -6px rgba(46, 63, 92, 0.16), 0 2px 4px -2px rgba(46, 63, 92, 0.08);
+            --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --font-script: "Caveat", "Marker Felt", cursive;
+        }
+
+        * { box-sizing: border-box; }
+
         body {
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding-top: 70px;
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-            color: #333;
+            padding-top: 74px;
+            background: var(--ocean);
+            background-attachment: fixed;
+            font-family: var(--font-sans);
+            color: var(--fg);
             scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
 
         nav {
             width: 100%;
-            background: #000;
-            padding: 10px 0;
+            background: rgba(248, 250, 255, 0.90);
+            backdrop-filter: saturate(180%) blur(8px);
+            -webkit-backdrop-filter: saturate(180%) blur(8px);
+            padding: 12px 0 0;
             position: fixed;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid var(--border);
         }
 
         nav ul {
             list-style: none;
             margin: 0;
-            padding: 0;
+            padding: 0 0 10px;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 22px;
         }
 
         nav ul li a {
-            color: #fff;
+            color: var(--fg);
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
+            font-weight: 600;
+            font-size: 1em;
+            letter-spacing: -0.005em;
         }
 
-        nav ul li a:hover {
-            text-decoration: underline;
+        nav ul li a:hover { color: var(--accent-hover); }
+
+        /* signature rainbow stripe */
+        .rainbow-stripe {
+            height: 4px;
+            width: 100%;
+            background: var(--rainbow);
         }
+
+        nav .rainbow-stripe { opacity: 0.9; }
 
         .content {
             text-align: center;
-            padding: 15px 20px;
+            padding: 40px 20px 10px;
             width: 100%;
-            max-width: 800px;
-            margin-bottom: 20px;
+            max-width: 820px;
         }
 
-        .content h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        .wordmark {
+            font-family: var(--font-script);
+            font-size: 5em;
+            line-height: 1;
+            font-weight: 700;
+            color: var(--fg-strong);
+            margin: 0;
+        }
+
+        .wordmark-underline {
+            height: 4px;
+            width: 120px;
+            margin: 6px auto 18px;
+            border-radius: var(--radius-pill);
+            background: var(--rainbow);
         }
 
         .tagline {
-            font-size: 1.25em;
-            color: #555;
-            margin: 0 auto 20px;
-            max-width: 640px;
+            font-size: 1.3em;
+            color: var(--fg-quiet);
+            margin: 0 auto 22px;
+            max-width: 600px;
             line-height: 1.5;
         }
 
@@ -76,66 +127,84 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
-            margin-bottom: 25px;
+            gap: 14px;
+            margin-bottom: 10px;
         }
 
         .button {
             display: inline-block;
-            background: #000;
+            background: var(--accent);
             color: #fff;
-            padding: 10px 20px;
+            padding: 12px 24px;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
+            border-radius: var(--radius-pill);
+            font-weight: 600;
             font-size: 1em;
             width: 100%;
-            max-width: 300px;
+            max-width: 280px;
             text-align: center;
+            box-shadow: 0 6px 18px -6px rgba(156, 140, 206, 0.55);
+            transition: background 150ms ease, transform 150ms ease;
         }
 
-        .button:hover {
-            background: #333;
-        }
+        .button:hover { background: var(--accent-hover); transform: translateY(-1px); }
 
         .section {
-            margin-bottom: 30px;
-            padding: 0 20px;
-            text-align: center;
-            max-width: 800px;
-            line-height: 1.5;
-            scroll-margin-top: 80px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-card);
+            padding: 28px 30px;
+            margin: 0 20px 22px;
+            width: calc(100% - 40px);
+            max-width: 760px;
+            line-height: 1.6;
+            scroll-margin-top: 90px;
         }
 
         .section h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
+            font-size: 1.7em;
+            color: var(--fg-strong);
+            margin: 0 0 14px;
+            letter-spacing: -0.01em;
         }
 
-        .section p {
-            font-size: 1.1em;
-        }
-
-        .section ul {
-            text-align: left;
-            list-style: disc inside;
-            padding-left: 20px;
-            margin: 15px 0;
-        }
+        .section p { font-size: 1.08em; margin: 0 0 12px; }
+        .section p:last-child { margin-bottom: 0; }
 
         .feature-list {
-            text-align: left;
-            max-width: 620px;
-            margin: 15px auto 0;
-            line-height: 1.6;
-            font-size: 1.1em;
+            list-style: none;
+            padding: 0;
+            margin: 16px 0;
         }
 
+        .feature-list li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 10px;
+            font-size: 1.08em;
+        }
+
+        .feature-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+        }
+
+        .feature-list li:nth-child(1)::before { background: var(--sky); }
+        .feature-list li:nth-child(2)::before { background: var(--lilac); }
+        .feature-list li:nth-child(3)::before { background: var(--mint); }
+
+        .section a { color: var(--accent-hover); font-weight: 600; }
+
         footer {
-            background: #000;
-            color: #fff;
-            padding: 20px 10px;
+            background: #1A2740;
+            color: #E4EAF2;
+            padding: 24px 16px;
             width: 100%;
             text-align: center;
             margin-top: auto;
@@ -143,34 +212,16 @@
         }
 
         footer a {
-            color: #fff;
+            color: #E4EAF2;
             text-decoration: none;
             margin: 0 10px;
         }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .disclaimer {
-            text-align: center;
-            font-size: 1em;
-            line-height: 1.5;
-            padding: 15px 20px;
-            max-width: 800px;
-            margin-bottom: 30px;
-            border-top: 1px solid #ccc;
-            padding-top: 20px;
-        }
+        footer a:hover { text-decoration: underline; }
 
         @media only screen and (min-width: 600px) {
-            .buttons-container {
-                flex-direction: row;
-            }
-
-            .content h1 {
-                font-size: 3em;
-            }
+            .buttons-container { flex-direction: row; }
+            .wordmark { font-size: 6.5em; }
         }
     </style>
 </head>
@@ -185,10 +236,12 @@
             <li><a href="team.html">Our Team</a></li>
             <li><a href="#disclaimer">Disclaimer</a></li>
         </ul>
+        <div class="rainbow-stripe"></div>
     </nav>
 
     <div class="content">
-        <h1>BAYE</h1>
+        <h1 class="wordmark">Baye</h1>
+        <div class="wordmark-underline"></div>
         <p class="tagline">We build tools that make legislation easier to understand, track, and act on.</p>
         <div class="buttons-container">
             <a href="mailto:support@baye.ca?subject=Polity%20enquiry" class="button">Get in touch</a>
@@ -203,18 +256,18 @@
             <li>Compare versions of a bill side by side, from introduction through to law.</li>
             <li>Understand definitions, cross-references, and dependencies without rebuilding them by hand.</li>
         </ul>
-        <p>It is built for the people who work closely with legislation &mdash; policy staff, legislative and parliamentary staff, law clerks, and government-relations and advocacy professionals.</p>
+        <p>It is built for the people who work closely with legislation: policy staff, legislative and parliamentary staff, law clerks, and government-relations and advocacy professionals.</p>
     </div>
 
     <div class="section" id="mission">
         <h2>Mission</h2>
-        <p>At Baye Labs Inc., our mission is to make complex information more accessible and engaging for anyone looking to better understand data-driven topics. Inspired by Bayesian principles, we focus on providing clear, evidence-based insights while always linking back to original sources for transparency. Our goal is to empower users with tools that simplify data exploration and even make it fun to explore. We believe in turning learning into a smooth and enjoyable experience, helping everyone navigate complex subjects&mdash;like politics&mdash;with ease.</p>
+        <p>At Baye Labs Inc., our mission is to make complex information more accessible and engaging for anyone looking to better understand data-driven topics. Inspired by Bayesian principles, we focus on providing clear, evidence-based insights while always linking back to original sources for transparency. Our goal is to empower users with tools that simplify data exploration and even make it fun to explore. We believe in turning learning into a smooth and enjoyable experience, helping everyone navigate complex subjects like politics with ease.</p>
     </div>
 
     <div class="section" id="previous">
         <h2>Previous Projects</h2>
-        <p><strong>VoteInformer</strong> was our first product &mdash; a civic-engagement app that helps people see which parties and politicians align with the policies they actually care about, moving the focus from political theatre toward real policy. It laid the groundwork for the legislative knowledge that powers Polity today.</p>
-        <p><a href="https://voteinformer.ca">Learn about VoteInformer</a></p>
+        <p><strong>VoteInformer</strong>, our first product, is a civic-engagement app that helps people see which parties and politicians align with the policies they actually care about, moving the focus from political theatre toward real policy. It laid the groundwork for the legislative knowledge that powers Polity today.</p>
+        <p><a href="https://voteinformer.ca">Try VoteInformer</a></p>
     </div>
 
     <div class="section" id="contact">
@@ -223,7 +276,7 @@
         <p>Address: 1800 Argyle St Unit 801, Halifax, NS B3J 3N8</p>
     </div>
 
-    <div class="disclaimer" id="disclaimer">
+    <div class="section" id="disclaimer">
         <h2>Disclaimer</h2>
         <p>Baye Labs Inc. provides tools to help users better understand complex topics but does not offer legal advice. Our tools and insights are non-partisan and designed for informational purposes only. We link directly to original sources for transparency, and users should refer to these sources for verification. For any legal or professional advice, please consult a qualified expert.</p>
     </div>
